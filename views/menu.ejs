@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+  <h1>Full Menu</h1>
+
+    <ul>
+        <% menu.forEach((food) => { %>
+            <li> <%= food.name %><br><%= food.price %><br><%= food.details %><br><div>Rating:<%= food.rating %></div></li>
+            <% if(food.catergory === 'mains') {%>
+                <h2>Mains</h2>
+            <% } else if(food.catergory === 'sides') {%>
+                <h2>Sides</h2>
+            <% } else if(food.catergory === 'desserts') {%>
+                <h2>Desserts</h2>
+            <% }%>
+        <% }) %>
+    </ul>
+</body>
+</html>
